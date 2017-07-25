@@ -11,3 +11,8 @@ get '/pokemon' do
   @pokemons = Pokemon.all
   erb :"pokemon/index"
 end
+
+get '/pokemon/:id' do
+  @pokemon = Pokemon.find(params[:id])
+  erb :"pokemon/show"
+end
