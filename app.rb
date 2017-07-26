@@ -5,12 +5,25 @@ require 'active_record'
 require_relative 'db/connection'
 
 require_relative 'models/pokemon'
+require_relative 'models/trainer'
+
+get '/trainers' do
+  @trainers = Trainer.all
+  erb :"trainers/index"
+end
+
+get '/trainers/:id' do
+  @trainer = Trainer.find(params[:id])
+  @pokemons = @trainer.pokemons
+  erb :"trainers/show"
+end
 
 
 get '/pokemon' do
   @pokemons = Pokemon.all
   erb :"pokemon/index"
 end
+
 
 get '/pokemon/new' do
   erb :"pokemon/new"

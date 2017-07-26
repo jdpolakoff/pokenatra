@@ -22,9 +22,5 @@
 <form action="/pokemon/<%= @pokemon.id %>" method="post">
   <input type="hidden" name="_method" value="delete">
 
-  <label for="pokemon[name]">Name:</label>
-  <input name="pokemon[name]" value=<%= @pokemon.name %>></label>
-
-  <input name = <%= @pokemon.name %>
   <input class="button-delete" type="submit" value="Delete!">
 </form>
