@@ -15,6 +15,10 @@ a, p, h2, h3 {
   border-radius: 100px;
 }
 
+.poke_img {
+  height: 300px;
+  width: 300px;
+}
 
 body {
   background-image: url(../images/pokedex.png);

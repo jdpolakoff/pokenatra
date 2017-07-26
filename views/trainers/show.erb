@@ -1,8 +1,13 @@
 <h2><a href="/trainers">Back To All Trainers</a></h2>
+
+<div class = "trainer_img">
+  <img src= "<%= @trainer.img_url %>">
+</div>
+
 <div class = "trainers">
   <p>Trainer name: <%= @trainer.name  %></p>
   <p>Trainer gender: <%= @trainer.gender %></p>
-  <p>Pokemons:</p>
+  <p>Pokemon:</p>
   <% @pokemons.each do |pokemon| %>
     <a href = "/pokemon/<%= pokemon.id %>"><%= pokemon.name %></a><br><br>
   <% end %>
